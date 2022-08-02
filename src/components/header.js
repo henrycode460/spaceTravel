@@ -11,7 +11,7 @@ function Header() {
     <nav>
       <img  src={mainLogo} style={ { width: '50px' } } alt="home"/>
       <NavLink
-        to=""
+        to="/"
         style={({ isActive }) =>
           isActive ? activeStyle : undefined
         }
@@ -19,7 +19,7 @@ function Header() {
         Rockets|
       </NavLink>
       <NavLink
-        to=""
+        to="missions"
         style={({ isActive }) =>
           isActive ? activeStyle : undefined
         }
@@ -27,7 +27,7 @@ function Header() {
         Missions|
       </NavLink>
       <NavLink
-        to=""
+        to="myprofile"
         style={({ isActive }) =>
           isActive ? activeStyle : undefined
         }
