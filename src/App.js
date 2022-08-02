@@ -1,7 +1,9 @@
+import Header from "./components/header";
+
 function App() {
   return (
-    <div >
-      <h1>HELLO REACT GROUP PROJECT</h1>
+    <div>
+      <Header />
     </div>
   );
 }
