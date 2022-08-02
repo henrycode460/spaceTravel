@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import mainLogo from "../image/home.png";
 
 function Header() {
   let activeStyle = {
@@ -8,6 +9,7 @@ function Header() {
 
   return (
     <nav>
+      <img  src={mainLogo} style={ { width: '50px' } } alt="home"/>
       <NavLink
         to=""
         style={({ isActive }) =>
