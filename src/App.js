@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from "./components/header";
 import Rockets from './components/rockets';
+import Missions from './components/missions';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Rockets />} />
+          <Route path="/missions" element={<Missions />} />
         </Routes>
       </main>
     </div>
