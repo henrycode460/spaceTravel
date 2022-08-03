@@ -28,12 +28,12 @@ const missionsReducer = (state = [], action) => {
       return action.payload;
     case BOOK:
       return [...state.map((item) => {
-        if (item.id !== action.id) return item;
+        if (item.id !== action.payload) return item;
         return { ...item, reserved: true };
         })]
     case LEAVE:
       return [...state.map((item) => {
-        if (item.id !== action.id) return item;
+        if (item.id !== action.payload) return item;
         return { ...item, reserved: false };
       })]
     default:
