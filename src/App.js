@@ -20,7 +20,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Rockets />} />
-          <Route path="/missions" element={<Missions missionList={state}/>} />
+          <Route path="/missions" element={<Missions missions={state.missions}/>} />
           <Route path="/myprofile" element={<MyProfile />} />
         </Routes>
       </main>
