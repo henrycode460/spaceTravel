@@ -19,7 +19,7 @@ const missionsReducer = (state = [], action) => {
   }
 };
 
-export const recieveMissions = () => async () => {
+export const recieveMissions = () => async (dispatch) => {
   console.log('called');
   await fetch(baseURL)
     .then((res) => res.json())
