@@ -9,7 +9,7 @@ import { recieveMissions } from './redux/missions/missions';
 
 function App() {
   const state = useSelector((state) => state);
-  console.log(state);
+  console.log('state',state);
   const dispatch = useDispatch();
   useEffect(() => async () => {
     await dispatch(recieveMissions());

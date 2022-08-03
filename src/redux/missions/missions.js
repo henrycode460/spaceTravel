@@ -20,18 +20,19 @@ const missionsReducer = (state = [], action) => {
 };
 
 export const recieveMissions = () => async (dispatch) => {
-  console.log('called');
   await fetch(baseURL)
     .then((res) => res.json())
     .then((missions) => {
-      console.log('fetching');
-      const missionsList = missions;
-      // Object.keys(missions).map((key) => {
-      //   missionsList.push({
-      //   });
-      // });
+      const missionsList = [];
+      Object.keys(missions).map((key) => {
+        missionsList.push({
+          mission_id: missions[key].mission_id,
+          mission_name: missions[key].mission_name,
+          description: missions[key].description,
+        });
+      });
       dispatch(read(missionsList));
-      console.log(missionsList);
+      console.log('missionsList',missionsList);
     });
 };
 
