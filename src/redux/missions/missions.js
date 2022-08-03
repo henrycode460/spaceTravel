@@ -9,6 +9,16 @@ export const read = (missions) => ({
   payload: missions,
 });
 
+// Reducer
+const missionsReducer = (state = [], action) => {
+  switch (action.type) {
+    case READ:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
 export const recieveMissions = () => async () => {
   console.log('called');
   await fetch(baseURL)
@@ -20,7 +30,9 @@ export const recieveMissions = () => async () => {
       //   missionsList.push({
       //   });
       // });
-      // dispatch(read(bookList));
+      dispatch(read(missionsList));
       console.log(missionsList);
     });
 };
+
+export default missionsReducer;
