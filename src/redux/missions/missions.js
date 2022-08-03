@@ -23,19 +23,22 @@ export const leave = (id) => ({
 
 // Reducer
 const missionsReducer = (state = [], action) => {
+  let newState;
   switch (action.type) {
     case READ:
       return action.payload;
     case BOOK:
-      return [...state.map((item) => {
-        if (item.id !== action.payload) return item;
+      newState = state.map((item) => {
+        if (item.mission_id !== action.payload) return item;
         return { ...item, reserved: true };
-        })]
+      });
+      return newState;
     case LEAVE:
-      return [...state.map((item) => {
-        if (item.id !== action.payload) return item;
+      newState = state.map((item) => {
+        if (item.mission_id !== action.payload) return item;
         return { ...item, reserved: false };
-      })]
+      });
+      return newState;
     default:
       return state;
   }
