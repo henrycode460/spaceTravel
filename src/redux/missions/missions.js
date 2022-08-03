@@ -1,6 +1,7 @@
 // Action types
 const READ = 'spaceTravel/missions/READ';
 const BOOK = 'spaceTravel/missions/BOOK';
+const LEAVE = 'spaceTravel/missions/LEAVE';
 
 const baseURL = 'https://api.spacexdata.com/v3/missions';
 
@@ -15,6 +16,11 @@ export const book = (id) => ({
   payload: id,
 });
 
+export const leave = (id) => ({
+  type: LEAVE,
+  payload: id,
+});
+
 // Reducer
 const missionsReducer = (state = [], action) => {
   switch (action.type) {
@@ -25,6 +31,11 @@ const missionsReducer = (state = [], action) => {
         if (item.id !== action.id) return item;
         return { ...item, reserved: true };
         })]
+    case LEAVE:
+      return [...state.map((item) => {
+        if (item.id !== action.id) return item;
+        return { ...item, reserved: false };
+      })]
     default:
       return state;
   }

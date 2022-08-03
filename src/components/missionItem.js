@@ -1,16 +1,18 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { book } from '../redux/missions/missions';
+import { book, leave } from '../redux/missions/missions';
 
-const MissionItem = ({ mission_id, mission_name, description, reserved }) => {
-  // console.log(mission_id);
+const MissionItem = ({ mission_id, mission_name, description }) => {
   const dispatch = useDispatch();
 
-  const reserve = (e) => {
+  const reserveMission = (e) => {
     e.preventDefault();
-    console.log('booking', mission_id, 'reserved was', reserved);
     dispatch(book(mission_id));
-    console.log('reserved is now', reserved);
+  };
+
+  const leaveMission = (e) => {
+    e.preventDefault();
+    dispatch(leave(mission_id));
   };
 
   return (
@@ -19,8 +21,8 @@ const MissionItem = ({ mission_id, mission_name, description, reserved }) => {
       <td>{description}</td>
       <td>status</td>
       <td>
-        <button onClick={reserve}>Join Mission</button>
-        <button>Leave Mission</button>
+        <button onClick={reserveMission}>Join Mission</button>
+        <button onClick={leaveMission}>Leave Mission</button>
       </td>
     </tr>
   );
