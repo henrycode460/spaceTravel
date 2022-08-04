@@ -6,6 +6,7 @@ import Rockets from './components/rockets';
 import Missions from './components/missions';
 import MyProfile from './components/myProfile';
 import { recieveMissions } from './redux/missions/missions';
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   const state = useSelector((state) => state);

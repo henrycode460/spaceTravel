@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import TestRenderer from 'react-test-renderer';
 import Missions from "../components/missions";
 import { Provider } from 'react-redux';

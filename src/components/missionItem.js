@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { book, leave } from '../redux/missions/missions';
+import Badge from 'react-bootstrap/Badge';
 import './missions.css';
 
 const MissionItem = ({ mission_id, mission_name, description, reserved }) => {
@@ -18,16 +19,27 @@ const MissionItem = ({ mission_id, mission_name, description, reserved }) => {
 
   return (
     <tr>
-      <td>{mission_name}</td>
+      <td style={{fontWeight: 'bold'}}>{mission_name}</td>
       <td>{description}</td>
       <td>
-        <div className={reserved ? 'join' : 'leave'}>
-          {reserved ? 'Active Member' : 'Not A Member'}
+        <div>
+          {reserved ? 
+            <Badge bg="info">Active Member</Badge>
+            :
+            <Badge bg="secondary">Not A Member</Badge>}
         </div>
       </td>
       <td>
-        <button onClick={reserveMission} className={reserved ? 'joinButton hide' : 'joinButton show'} >Join Mission</button>
-        <button onClick={leaveMission}  className={reserved ? 'leavButton show' : 'leavButton hide'} >Leave Mission</button>
+        <button
+          onClick={reserveMission}
+          className={reserved ? 'join hide' : 'join show'} >
+          Join Mission
+        </button>
+        <button
+          onClick={leaveMission}
+          className={reserved ? 'leave show' : 'leave hide'} >
+          Leave Mission
+        </button>
       </td>
     </tr>
   );

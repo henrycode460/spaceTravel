@@ -6,11 +6,17 @@
   display: none;
 }
 
-.joinButton{
-  border: red;
+.join,
+.leave {
+  border-radius: 4px;
+  background: none;
 }
 
-.leavButton {
-  border: red;
+.join {
+  border: solid 1px black;
+}
+
+.leave {
+  border: solid 1px red;
   color: red;
 }

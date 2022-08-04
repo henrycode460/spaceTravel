@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-// import { Badge, Button, Container, Table } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import MissionItem from './missionItem';
 
@@ -12,13 +11,13 @@ function Missions () {
   return (
     <div>
       <hr />
-      <Table>
+      <Table striped bordered responsive style={{margin: '3%'}}>
       <thead>
         <tr>
           <th>Mission</th>
           <th>Description</th>
           <th>Status</th>
-          <th>empty</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
