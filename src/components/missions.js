@@ -12,7 +12,7 @@ function Missions () {
   return (
     <div>
       <hr />
-      <Table responsive striped bordered hover>
+      <Table>
       <thead>
         <tr>
           <th>Mission</th>
