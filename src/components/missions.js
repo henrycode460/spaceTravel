@@ -10,8 +10,7 @@ function Missions () {
 
   return (
     <div>
-      <hr />
-      <Table striped bordered responsive style={{margin: '3%'}}>
+      <Table striped bordered responsive>
       <thead>
         <tr>
           <th>Mission</th>

@@ -18,6 +18,7 @@ function App() {
   return (
     <div>
       <Header />
+      <hr />
       <main>
         <Routes>
           <Route path="/" element={<Rockets />} />
