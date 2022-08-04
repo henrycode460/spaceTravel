@@ -1,16 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit';
-// import { combineReducers } from 'redux';
+ import { combineReducers } from 'redux';
 import missionsReducer from './missions/missions';
-// import rocket reducer
+import rockertsReducer from './rockets/rockets';
 
-// const rootStore = combineReducers({
-//   books: booksReducer,
-//   categories: categoriesReducer,
-// });
+
+ const rootStore = combineReducers({
+  missions: missionsReducer,
+  rockets: rockertsReducer
+ });
 
 const store = configureStore({
-  // reducer: rootStore,
-  reducer: missionsReducer,
+   reducer: rootStore,
+  
 });
 
 export default store;
