@@ -1,0 +1,29 @@
+nav {
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+.home {
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.inactive {
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+}
