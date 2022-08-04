@@ -9,7 +9,6 @@ import { recieveMissions } from './redux/missions/missions';
 
 function App() {
   const state = useSelector((state) => state);
-  console.log('state',state);
   const dispatch = useDispatch();
   useEffect(() => async () => {
     await dispatch(recieveMissions());
@@ -21,7 +20,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Rockets />} />
-          <Route path="/missions" element={<Missions />} />
+          <Route path="/missions" element={<Missions missions={state.missions}/>} />
           <Route path="/myprofile" element={<MyProfile />} />
         </Routes>
       </main>
