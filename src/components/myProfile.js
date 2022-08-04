@@ -16,11 +16,11 @@ function MyProfile () {
         </tr>
       </thead>
       <tbody>
-      <td>
-        {joinedMissions.map((mission) => <tr>{mission.mission_name}</tr>)}
+        <td>
+          {joinedMissions.map((mission) => <tr>{mission.mission_name}</tr>)}
         </td>
         <td>
-        {rockets.map((rocket) => <tr>{rocket}</tr>)}
+          {rockets.map((rocket) => <tr>{rocket}</tr>)}
         </td>
       </tbody>
     </Table>

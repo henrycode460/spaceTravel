@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing missions component: 1`] = `
+<table
+  className="table"
+>
+  <thead>
+    <tr>
+      <th>
+        My Missions
+      </th>
+      <th>
+        My Rockets
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <td />
+    <td>
+      <tr>
+        rocket1
+      </tr>
+      <tr>
+        rocket2
+      </tr>
+      <tr>
+        rocket3
+      </tr>
+    </td>
+  </tbody>
+</table>
+`;
+
+exports[`Testing my profile component: 1`] = `
+<table
+  className="table"
+>
+  <thead>
+    <tr>
+      <th>
+        My Missions
+      </th>
+      <th>
+        My Rockets
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <td />
+    <td>
+      <tr>
+        rocket1
+      </tr>
+      <tr>
+        rocket2
+      </tr>
+      <tr>
+        rocket3
+      </tr>
+    </td>
+  </tbody>
+</table>
+`;
