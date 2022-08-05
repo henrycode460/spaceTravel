@@ -1,0 +1,20 @@
+.myProfile {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+h2 {
+  padding-left: 32px;
+}
+
+li {
+  list-style: none;
+  border: solid 1px lightgray;
+  border-bottom: none;
+  padding: 20px;
+}
+
+li:last-child {
+  border-bottom: solid 1px lightgray;
+}
