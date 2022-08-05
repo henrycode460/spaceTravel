@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux';
 import './myProfile.css';
 
 function MyProfile () {
-  const joinedMissions = useSelector(state => state.filter((mission) => mission.reserved));
-  const rockets = ['rocket1', 'rocket2', 'rocket3'];
-
+  const joinedMissions = useSelector(state => state.missions.filter((mission) => mission.reserved));
+  const rockets = useSelector(state => state.rockets.filter((mission) => mission.reserved));
+  
   return (
     <div className='myProfile'>
       <div className='container'>
@@ -18,7 +18,7 @@ function MyProfile () {
         <div className='container'>
           <h2>My Rockets</h2>
           <ul>
-          {rockets.map((rocket) => <li>{rocket}</li>)}
+          {rockets.map((rocket) => <li>{rocket.rockerts_name}</li>)}
           </ul>
       </div>
     </div>

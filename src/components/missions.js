@@ -1,12 +1,17 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import MissionItem from './missionItem';
+import { recieveMissions } from '../redux/missions/missions';
 
 function Missions () {
-  const missions = useSelector(state => state);
+  const missions = useSelector(state => state.missions);
+  const dispatch = useDispatch();
 
-  console.log('at componenet:', missions);
+  useEffect(() => async () => {
+    if (missions.length === 0) await dispatch(recieveMissions());
+  }, []);
 
   return (
     <div>

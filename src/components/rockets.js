@@ -1,9 +1,23 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { recieveRockerts } from '../redux/rockets/rockets';
+import RockertList from './rockertList';
 
-function Rockets () {
+function Rocket () {
+  const rockets = useSelector(state => state.rockets);
+  const dispatch = useDispatch();
+  useEffect(() => async () => {
+    if (rockets.length === 0) await dispatch(recieveRockerts());
+  }, []);
+
   return (
-    <h1>Rockets page</h1>
+    <div>
+      {rockets.map((rocket) => (
+        <RockertList key={rocket.id} rocket_id={rocket.rockerts_id} image={rocket.image} name={rocket.rockerts_name} description={rocket.description} reserved={rocket.reserved} />
+      ))}
+    </div>
   );
 }
 
-export default Rockets;
+export default Rocket;

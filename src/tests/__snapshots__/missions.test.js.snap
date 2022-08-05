@@ -2,27 +2,28 @@
 
 exports[`Testing missions component: 1`] = `
 <div>
-  <hr />
-  <table
-    className="table"
+  <div
+    className="table-responsive"
   >
-    <thead>
-      <tr>
-        <th>
-          Mission
-        </th>
-        <th>
-          Description
-        </th>
-        <th>
-          Status
-        </th>
-        <th>
-          empty
-        </th>
-      </tr>
-    </thead>
-    <tbody />
-  </table>
+    <table
+      className="table table-striped table-bordered"
+    >
+      <thead>
+        <tr>
+          <th>
+            Mission
+          </th>
+          <th>
+            Description
+          </th>
+          <th>
+            Status
+          </th>
+          <th />
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
 </div>
 `;
