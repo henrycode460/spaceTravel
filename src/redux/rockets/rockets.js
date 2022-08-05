@@ -33,7 +33,7 @@ export const recieveRockerts = () => async (dispatch) => {
         });
       });
       dispatch(read(rockertsList));
-      console.log('rockertsList',rockertsList);
+      console.log('fetched rockets',rockertsList);
     }));
 
 };

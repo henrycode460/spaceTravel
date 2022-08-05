@@ -32,7 +32,7 @@ export const recieveMissions = () => async (dispatch) => {
         });
       });
       dispatch(read(missionsList));
-      console.log('missionsList',missionsList);
+      console.log('fetched missions',missionsList);
     });
 };
 

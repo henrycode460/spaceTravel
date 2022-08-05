@@ -1,13 +1,20 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
-
+import { recieveRockerts } from '../redux/rockets/rockets';
 import RockertList from './rockertList';
 
 function Rocket () {
-  const rockets = useSelector(state => state);
-console.log(rockets);
+  const rockets = useSelector(state => state.rockets);
+  const dispatch = useDispatch();
+  useEffect(() => async () => {
+    if (rockets.length === 0) await dispatch(recieveRockerts());
+  }, []);
+  //  useEffect(() => async () => {
+  //   await dispatch(recieveRockerts());
+  // }, []);
+console.log('at rockets',rockets);
 
 
   return (
