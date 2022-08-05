@@ -7,23 +7,21 @@ import { recieveMissions } from '../redux/missions/missions';
 
 function Missions () {
   const missions = useSelector(state => state.missions);
-  console.log('at missions', missions);
   const dispatch = useDispatch();
- 
+  
   useEffect(() => async () => {
     if (missions.length === 0) await dispatch(recieveMissions());
   }, []);
 
   return (
     <div>
-      <hr />
-      <Table responsive striped bordered hover>
+      <Table striped bordered responsive>
       <thead>
         <tr>
           <th>Mission</th>
           <th>Description</th>
           <th>Status</th>
-          <th>empty</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
