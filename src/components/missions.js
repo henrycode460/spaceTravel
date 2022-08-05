@@ -8,7 +8,7 @@ import { recieveMissions } from '../redux/missions/missions';
 function Missions () {
   const missions = useSelector(state => state.missions);
   const dispatch = useDispatch();
-
+  
   useEffect(() => async () => {
     if (missions.length === 0) await dispatch(recieveMissions());
   }, []);
