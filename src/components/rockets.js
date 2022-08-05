@@ -11,9 +11,7 @@ function Rocket () {
   useEffect(() => async () => {
     if (rockets.length === 0) await dispatch(recieveRockerts());
   }, []);
-  //  useEffect(() => async () => {
-  //   await dispatch(recieveRockerts());
-  // }, []);
+
 console.log('at rockets',rockets);
 
 
