@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing rockert component: 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "gap": "30px",
+      "marginBottom": "50px",
+    }
+  }
+>
+  <img
+    alt="rocket"
+    style={
+      Object {
+        "width": "250px",
+      }
+    }
+  />
+  <div>
+    <h3 />
+    <p>
+       
+    </p>
+    <button
+      className="join show"
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "rgba(0, 102, 255, 0.89)",
+          "border": "none",
+          "color": "white",
+          "padding": "10px",
+          "width": "150px",
+        }
+      }
+    >
+      Reserve Rocket
+    </button>
+    <button
+      className="leave hide"
+      onClick={[Function]}
+      style={
+        Object {
+          "border": "solid 1px gray",
+          "color": "gray",
+          "padding": "10px",
+          "width": "180px",
+        }
+      }
+    >
+      Cancel Resservation
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Testing rocket component: 1`] = `
+<div>
+  <img 
+    
+  />
+    <div
+      
+    >
+      <h3>
+
+      </h3>
+        <p>
+          </p>
+
+          <button>
+          Reserve Rocket
+          </button>
+
+           <button>
+           Cancel Resservation
+          </button>
+ 
+</div>
+`;
