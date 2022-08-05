@@ -12,11 +12,16 @@
   background: none;
 }
 
+button {
+  width: 120px;
+  border: solid 1px;
+}
+
 .join {
-  border: solid 1px black;
+  border-color: black;
 }
 
 .leave {
-  border: solid 1px red;
+  border-color: red;
   color: red;
 }

@@ -24,9 +24,9 @@ const MissionItem = ({ mission_id, mission_name, description, reserved }) => {
       <td>
         <div>
           {reserved ? 
-            <Badge bg="info">Active Member</Badge>
+            <Badge bg="info" style={{width: '110px'}}>Active Member</Badge>
             :
-            <Badge bg="secondary">Not A Member</Badge>}
+            <Badge bg="secondary" style={{width: '110px'}}>Not A Member</Badge>}
         </div>
       </td>
       <td>
