@@ -12,13 +12,13 @@ function MyProfile () {
       <div className='container'>
           <h2>My Missions</h2>
             <ul>
-              {joinedMissions.map((mission) => <li>{mission.mission_name}</li>)}
+              {joinedMissions.map((mission) => <li key={mission.mission_id}>{mission.mission_name}</li>)}
             </ul>        
         </div>
         <div className='container'>
           <h2>My Rockets</h2>
           <ul>
-          {rockets.map((rocket) => <li>{rocket.rockerts_name}</li>)}
+          {rockets.map((rocket) => <li key={rocket.rockerts_id} >{rocket.rockerts_name}</li>)}
           </ul>
       </div>
     </div>
