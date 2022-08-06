@@ -9,9 +9,9 @@ function Missions () {
   const missions = useSelector(state => state.missions);
   const dispatch = useDispatch();
   
-  useEffect(() => async () => {
-    if (missions.length === 0) await dispatch(recieveMissions());
-  }, []);
+  useEffect(() => {
+    if (rockets.length === 0) dispatch(recieveRockerts());
+  });
 
   return (
     <div>
