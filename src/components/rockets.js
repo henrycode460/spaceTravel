@@ -7,9 +7,10 @@ import RockertList from './rockertList';
 function Rocket () {
   const rockets = useSelector(state => state.rockets);
   const dispatch = useDispatch();
-  useEffect(() => async () => {
-    if (rockets.length === 0) await dispatch(recieveRockerts());
-  }, []);
+
+  useEffect(() => {
+    if (rockets.length === 0) dispatch(recieveRockerts());
+  });
 
   return (
     <div>
