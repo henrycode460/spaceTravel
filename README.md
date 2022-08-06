@@ -18,7 +18,7 @@
 
 ## Live Demo
 
-- [App Live Demo](https://henrycode460.github.io/spaceTravel/)
+- [App Live Demo](https://henrycode460.github.io/spaceTravel/public/)
 
 
 
@@ -42,7 +42,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Farida Hamid **
+👤 **Farida Hamid**
 
 - LinkedIn: [LinkedIn](https://linkedin.com/in/farida-hamid)
 - GitHub: [@Farida-Hamid](https://github.com/Farida-Hamid)
