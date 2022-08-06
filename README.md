@@ -39,7 +39,6 @@ To get a local copy up and running follow these simple example steps.
 - run ``` cd spaceTravel```
 - open index.html from public folder
 
-### Usage
 
 ## Authors
 
