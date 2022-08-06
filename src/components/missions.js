@@ -10,7 +10,7 @@ function Missions () {
   const dispatch = useDispatch();
   
   useEffect(() => {
-    if (rockets.length === 0) dispatch(recieveRockerts());
+    if (missions.length === 0) dispatch(recieveMissions());
   });
 
   return (
